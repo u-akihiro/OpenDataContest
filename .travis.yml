@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: SPc8DS3+pgsdYGVgafXpGHOXmqOn9LskhIEYHuUiKcdzTV4V/OHRjNx1bg8F+nrDEdOD1iDGhDgp6JjpT5Vvy00UdyONz8XnybmQO0Z2uSv8zx19rdKe9HPBWwleydy9uvQnZXH5c+ZU6VU3zK6UUoa+b1WS4xJnG1PmlWfwY5c=
+  app: kyotomap
+  on:
+    repo: u-akihiro/OpenDataContest
