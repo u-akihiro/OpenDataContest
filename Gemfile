@@ -45,6 +45,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'httpclient'
 gem 'rails_12factor', group: :production
 
 group :development do
