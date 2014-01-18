@@ -48,6 +48,11 @@ end
 gem 'httpclient'
 gem 'rails_12factor', group: :production
 
+group :test do
+  gem 'rake'
+  gem 'rspec-rails'
+end
+
 group :development do
   gem 'sqlite3'
 end
