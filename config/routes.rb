@@ -1,5 +1,7 @@
 OpenDataContest::Application.routes.draw do
   
+  resources :accounts
+
   # Client
   root 'client#index' #クライアント側のホームをルートディレクトリ
   
