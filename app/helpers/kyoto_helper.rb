@@ -39,11 +39,8 @@ module KyotoHelper
   
   #APIに送るパラメータをセットする。
   def self.set_parameter(type, offset = 0)
-    return {
-      'rdf_type' => type,
-      'offset' => offset,
-      'limit' => LIMIT,
-    }
+    param =  {'rdf_type' => type, 'offset' => offset, 'limit' => LIMIT}
+    return param;
   end
 
 end

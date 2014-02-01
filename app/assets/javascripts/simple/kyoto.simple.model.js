@@ -14,7 +14,7 @@ var KyotoSimpleModel = (function() {
      */
     KyotoSimpleModel.prototype.getFetch = function(views, viewMethodName) {
         $.get(this.site, function(json) {
-            for(view in views) view[viewMethodName](json);
+            for(view in views) views[view][viewMethodName](json);
         }, 'JSON');
     };
 
