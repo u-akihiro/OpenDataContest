@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 =begin
  
   京都APIからデータを取得するモジュール  
