@@ -1,5 +1,8 @@
+# encoding: utf-8
+
 OpenDataContest::Application.routes.draw do
   
+  get "hotspring/index"
   # Client
   root 'client#index' #クライアント側のホームをルートディレクトリ
   
