@@ -21,3 +21,10 @@
 *.swp
 # for aptana studio project file
 .project
+
+# Ignore rbenv local
+.ruby-version
+
+# Ignore bundler file
+/vendor/bundle
+
