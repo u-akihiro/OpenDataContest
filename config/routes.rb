@@ -7,6 +7,7 @@ OpenDataContest::Application.routes.draw do
   get '/detail/:rdf' => "client#detail"
   #get "/sightseeing/" => 'controller#method'
   
+  # API情報(野口のみ使用？？)
   get '/api/:type' => "api#get"
   post '/api/:type' => 'api#post'
  

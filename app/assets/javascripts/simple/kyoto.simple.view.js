@@ -14,6 +14,7 @@ KyotoSimpleView.prototype.render = function(datas) {
     if(!$.isPlainObject(datas)) return false;
     var html = this._htmlFactory(datas, '_listHtml');
     this.el.list.html(html);
+    this.el.list.collapsibleset('refresh');
 };
 
 /**
@@ -24,6 +25,7 @@ KyotoSimpleView.prototype.append = function(datas) {
     if(!$.isPlainObject(datas)) return false;
     var html = this._htmlFactory(datas, '_listHtml');
     this.el.list.append(html);
+    this.el.list.collapsibleset('refresh');
 };
 
 /**
@@ -31,7 +33,7 @@ KyotoSimpleView.prototype.append = function(datas) {
  * @param {Object} urnData
  */
 KyotoSimpleView.prototype._listHtml = function(urnData) {
-    var result;
+    var result = '';
     result += '<h3>' + urnData['http://smartercity.jp/ug#title'][0]['value']+ '</h3>';
     result += '<p>areeeeeee</p>';
     return result;
