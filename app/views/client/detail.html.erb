@@ -1,0 +1,50 @@
+
+<div id="list" data-role="collapsible-set">
+    <div data-role="collapsible"><h3>出町ふたば</h3><p>〒602-0822 京都市上京区出町通今出川上ル青龍町236</p></div>
+    <div data-role="collapsible"><h3>本家 第一旭 たかばし本店</h3><p>〒600-8213 京都府京都市下京区 東塩小路向畑町845</p></div>
+    <div data-role="collapsible"><h3>たま木亭</h3><p>〒611-0011 宇治市五ケ庄新開14-91</p></div>
+</div>
+<input type="hidden" id="params" value="<%= @param %>">
+
+<%= javascript_include_tag "simple/kyoto.simple.model.js" %>
+<%= javascript_include_tag "simple/kyoto.simple.controller.js" %>
+<%= javascript_include_tag "simple/kyoto.simple.view.js" %>
+<%= javascript_include_tag "simple/common.js" %>
+
+<script>
+/*
+var url = '/api/' + $('#params').val();
+$(document).ready(function() {
+    var view = function(json) {
+        var html = '';
+        for(var i = 0; i < json.places.length; i++) {
+            html += '<div class="ui-collapsible ui-collapsible-collapsed" data-role="collapsible">';
+            for(var key in json.places[i]) {
+               var title = json.places[i][key]['http://smartercity.jp/ug#title'][0]['value'];
+               html += '<h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed">';
+               html += '<a class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-corner-bottom ui-btn-up-c" href="#" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="plus" data-iconpos="left" data-theme="c">';
+               html += '<span class="ui-btn-inner ui-corner-bottom">';
+               html += '<span class="ui-btn-text">';
+               html += title;
+               html += '<span class="ui-collapsible-heading-status"> click to expand contents</span></span>';
+               html += '<span class="ui-icon ui-icon-plus ui-icon-shadow"> </span></span>';
+               html += '</a>';
+               html += '</h3>';
+               html += '<div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">';
+               html += '<p> cotentns 1</p>';
+               html += '</div>';
+            }
+            html += '</div>';
+        }
+        return html;
+    };
+    
+    var fetch = function() {
+        $.get(url, function(json) {
+           $('#list').append(view(json));
+        })
+    };
+
+    fetch();
+});*/
+</script>
