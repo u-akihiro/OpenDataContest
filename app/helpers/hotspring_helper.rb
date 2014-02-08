@@ -34,6 +34,7 @@ module HotspringHelper
         #httpClient.set_auth(BASE_URL, USERNAME, PASSWORD)
         # get request
         data = httpClient.get_content(BASE_URL, params)
+        puts BASE_URL,params
         return data
     rescue HTTPClient::BadResponseError => e
     rescue HTTPClient::TimeoutError => e
@@ -51,10 +52,12 @@ module HotspringHelper
   end
 
   #APIに送るパラメータをセットする。
+  #http://jws.jalan.net/APICommon/OnsenSearch/V1/?key=cap143ecd74693&pref=260000&count=10&xml_ptn=1
   def self.set_parameter(offset = 0)
     params = {
       'key' => PASSWORD,
-      'l_area' => '010300',
+      'pref' => '260000',
+      # 'l_area' => '010300',
       'count' => 10,
       'xml_ptn' => 1
     }
