@@ -1,8 +1,8 @@
 # encoding: utf-8
 
 =begin
- 
-  じゃらんAPIからデータを取得するモジュール  
+
+  じゃらんAPIからデータを取得するモジュール
  データを取得するときは[self.fetch]を使用し、
  パラメーターの設定等は[set_parameter]に追加する。
 
@@ -29,7 +29,7 @@ module HotspringHelper
   # APIからデータを取得する。
   def self.fetch(params)
     httpClient = HTTPClient.new
-    begin 
+    begin
         # basic 認証
         #httpClient.set_auth(BASE_URL, USERNAME, PASSWORD)
         # get request
@@ -39,7 +39,7 @@ module HotspringHelper
     rescue HTTPClient::TimeoutError => e
     end
   end
-  
+
   def self.test_fetch
     httpClient = HTTPClient.new
     begin
