@@ -14,8 +14,8 @@ OpenDataContest::Application.routes.draw do
 
   # hotsprintのapi
   get '/api/hotspring' => 'hotspring#fetch'
-  get '/hotspring' => 'hotspring#fetch'
-  # get 'hotspring/index'
+  # get '/hotspring' => 'hotspring#fetch'
+  get '/hotspring/index'
 
   # API情報(野口のみ使用？？)
   get '/api/:type' => "api#get"
