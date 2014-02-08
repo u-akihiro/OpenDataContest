@@ -1,7 +1,7 @@
 class HotspringController < ApplicationController
 
   def index
-   render 'index'
+    render 'index'
   end
 
   def fetch
@@ -9,7 +9,6 @@ class HotspringController < ApplicationController
     # @xml = HotspringHelper.fetch(param)
     @json = HotspringHelper.test_fetch
     # @json = HotspringHelper.xml_to_json(xml)
-#    puts 'dd'
     puts @json
     render :json => @json
   end
