@@ -9,13 +9,16 @@ class HotspringController < ApplicationController
     # @xml = HotspringHelper.fetch(param)
     @json = HotspringHelper.test_fetch
     # @json = HotspringHelper.xml_to_json(xml)
-    puts @json
+    # puts @json
     render :json => @json
   end
 
   def detail
-    @param = params[:rdf]
-    render 'detail'
+    param = HotspringHelper.set_parameter()
+    testxmls = HotspringHelper.fetch(param)
+    @testjsons = HotspringHelper.xml_to_json(testxmls)
+    # puts @testjsons
+    render :json => @testjsons
   end
 
 end

@@ -34,6 +34,30 @@ var HotSpringModel = (function() {
         });
     };
 
+    /**
+     * first load
+     * @link views
+     * @access public
+     */
+    // HotSpringModel.prototype.load = function() {
+    //     KyotoSimpleModel.getFetch(this.views, 'render');
+    // };
+
+    /**
+     *
+     */
+    // HotSpringModel.prototype.moreEvent = function() {
+    //     var self = this;
+    //     this.el.more.click(function() {
+    //         KyotoSimpleModel.offsetUp();
+    //         KyotoSimpleModel.postFetch(self.views, 'append');
+    //     });
+    // };
+
+    /**
+     * set view
+     * @param {String} view
+     */
     HotSpringModel.prototype.setView = function(view) {
         this.views = view;
         console.log(this.views);

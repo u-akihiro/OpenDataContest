@@ -13,7 +13,7 @@ OpenDataContest::Application.routes.draw do
   #get "/sightseeing/" => 'controller#method'
 
   # hotsprintのapi
-  get '/api/hotspring' => 'hotspring#fetch'
+  get '/api/hotspring' => 'hotspring#detail'
   # get '/hotspring' => 'hotspring#fetch'
   get '/hotspring' => 'hotspring#index'
 
