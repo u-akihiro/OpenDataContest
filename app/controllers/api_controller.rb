@@ -1,8 +1,10 @@
 class ApiController < ApplicationController
   
+  skip_before_filter :verify_authenticity_token ,:only => [:post]
+  
   #初めの取得時(ページにジャンプした時)
   def get
-    param = KyotoHelper.(params[:rdf]);
+    param = KyotoHelper.set_parameter(params[:type]);
     @json = KyotoHelper.fetch(param);
     render :json => @json
   end
